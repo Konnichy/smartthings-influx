@@ -43,7 +43,7 @@ func (db InfluxDB) Add(datapoints []monitor.DeviceDataPoint) error {
 		point, err := influxcli.NewPoint(
 			dp.Key,
 			map[string]string{
-				"device":     dp.Device,
+				"deviceName": dp.Device,
 				"component":  dp.Component,
 				"capability": dp.Capability,
 				"unit":       dp.Unit,
